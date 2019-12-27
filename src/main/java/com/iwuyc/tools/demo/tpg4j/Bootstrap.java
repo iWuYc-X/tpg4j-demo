@@ -29,5 +29,8 @@ public class Bootstrap {
         // print: true
         assert  pools1 == pools2;
         end.get();
+
+        // 最后在应用程序关闭的时候，应当把线程池服务关闭。
+        ThreadPoolServiceHolder.getThreadPoolsService().shutdown();
     }
 }
