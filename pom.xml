@@ -13,27 +13,31 @@
         <maven.compiler.target>1.8</maven.compiler.target>
         <maven.compiler.compilerVersion>1.8</maven.compiler.compilerVersion>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <tpg4j.version>0.1.1</tpg4j.version>
+        <slf4j-api.version>1.6.0</slf4j-api.version>
+        <guava.version>11.0</guava.version>
+        <snakeyaml.version>1.4</snakeyaml.version>
     </properties>
     <dependencies>
         <dependency>
             <groupId>com.iwuyc.tools</groupId>
             <artifactId>tpg4j</artifactId>
-            <version>0.1.1</version>
+            <version>${tpg4j.version}</version>
         </dependency>
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-api</artifactId>
-            <version>1.6.0</version>
+            <version>${slf4j-api.version}</version>
         </dependency>
         <dependency>
             <groupId>com.google.guava</groupId>
             <artifactId>guava</artifactId>
-            <version>11.0</version>
+            <version>${guava.version}</version>
         </dependency>
         <dependency>
             <groupId>org.yaml</groupId>
             <artifactId>snakeyaml</artifactId>
-            <version>1.4</version>
+            <version>${snakeyaml.version}</version>
         </dependency>
     </dependencies>
 
