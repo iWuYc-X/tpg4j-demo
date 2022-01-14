@@ -13,15 +13,15 @@
         <maven.compiler.target>1.8</maven.compiler.target>
         <maven.compiler.compilerVersion>1.8</maven.compiler.compilerVersion>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <tpg4j.version>0.1.1</tpg4j.version>
+        <tpg4j.version>2021.4</tpg4j.version>
         <slf4j-api.version>1.6.0</slf4j-api.version>
-        <guava.version>11.0</guava.version>
+        <guava.version>15.0</guava.version>
         <snakeyaml.version>1.4</snakeyaml.version>
     </properties>
     <dependencies>
         <dependency>
-            <groupId>com.iwuyc.tools</groupId>
-            <artifactId>tpg4j</artifactId>
+            <groupId>com.iwuyc.tpg4j</groupId>
+            <artifactId>tpg4j-core</artifactId>
             <version>${tpg4j.version}</version>
         </dependency>
         <dependency>
@@ -41,6 +41,38 @@
         </dependency>
     </dependencies>
 
+    <profiles>
+        <profile>
+            <id>sonatype</id>
+            <repositories>
+                <repository>
+                    <id>sonatype-prerelease</id>
+                    <snapshots>
+                        <enabled>true</enabled>
+                        <updatePolicy>always</updatePolicy>
+                    </snapshots>
+                    <releases>
+                        <enabled>true</enabled>
+                        <updatePolicy>always</updatePolicy>
+                    </releases>
+                    <url>https://oss.sonatype.org/content/repositories/comiwuyctpg4j-1007/</url>
+                </repository>
+                <repository>
+                    <id>sonatype-release</id>
+                    <snapshots>
+                        <enabled>true</enabled>
+                        <updatePolicy>always</updatePolicy>
+                    </snapshots>
+                    <releases>
+                        <enabled>true</enabled>
+                        <updatePolicy>always</updatePolicy>
+                    </releases>
+                    <url>https://oss.sonatype.org/content/repositories/releases/</url>
+                </repository>
+            </repositories>
+
+        </profile>
+    </profiles>
     <build>
         <plugins>
             <plugin>
